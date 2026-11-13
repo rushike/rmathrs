@@ -6,6 +6,9 @@ pub mod config;
 pub mod error;
 
 #[cfg(feature = "malachite")]
+pub mod bridge;
+
+#[cfg(feature = "malachite")]
 pub mod constants;
 
 #[cfg(feature = "malachite")]
@@ -16,3 +19,6 @@ pub mod numbers;
 
 #[cfg(feature = "malachite")]
 pub use numbers::{BigNum, Complex, Fraction, Real};
+
+#[cfg(feature = "malachite")]
+pub use bridge::rmath_bridge_dispatch;
